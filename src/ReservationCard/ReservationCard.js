@@ -1,4 +1,5 @@
 import React from 'react';
+import './reservationCard.css'
 
 function ReservationCard(props) {
   return (

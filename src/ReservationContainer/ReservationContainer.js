@@ -1,15 +1,13 @@
 import React from 'react';
-import ReservationCard from './ReservationCard/ReservationCard.js';
+import ReservationCard from '../ReservationCard/ReservationCard.js';
 
 
-function displayAllReservations(props) {
+function ReservationContainer(props) {
   const allReservations = props.reservations.map(reservation => {
-    return <ReservationCard
-    <article className='reservation-card'>
-      <p>name={reservation.name}</p>
-      <p>date={reservation.date}</p>
-      <p>time={reservation.time}</p>
-    </article>
+    return  <ReservationCard
+      name={reservation.name}
+      date={reservation.date}
+      time={reservation.time}
     />
   })
   return (
