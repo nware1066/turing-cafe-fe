@@ -10,12 +10,17 @@ class App extends Component {
     this.state = {
       reservations: []
     }
+    this.setReservation = this.setReservation.bind(this);
   }
 
   componentDidMount() {
     getReservations()
     .then(reservations => this.setState({reservations: reservations}))
     .catch(error => console.log('set error', error))
+  }
+
+  setReservation() {
+
   }
 
 
@@ -27,7 +32,10 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          <ReservationContainer reservations={this.state.reservations}/>
+          <ReservationContainer
+          reservations={this.state.reservations}
+          setReservation={this.setReservation}
+          />
         </div>
       </div>
     )

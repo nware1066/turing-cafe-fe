@@ -16,6 +16,15 @@ class Form extends Component {
     return (
       <form className='reservation-form'>
         <div>
+        <label htmlFor='user-name'>Name:</label>
+        <input
+        className='reservation-name'
+        type='text'
+        placeholder='party name'
+        value={this.state.name}
+        onChange={this.handleInput}
+        />
+        </div>
       </form>
     )
   }
