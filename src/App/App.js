@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {getReservations} from '../apiCalls'
 import './App.css';
+import ReservationCard from './ReservationCard/ReservationCard.js'
 
 class App extends Component {
   constructor() {

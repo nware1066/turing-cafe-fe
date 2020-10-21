@@ -10,3 +10,4 @@ function ReservationCard(props) {
   }
 }
 //
+export default ReservationCard;
