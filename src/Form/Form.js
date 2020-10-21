@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 class Form extends Component {
   constructor(props) {
@@ -9,7 +9,8 @@ class Form extends Component {
   }
 
   handleInput = (event) => {
-    ths.setState({ [event.target.name]: event.target.value })
+    this.setState({ [event.target.name]: event.target.value })
+    .then(this.setReservation())
   }
 
   render() {
